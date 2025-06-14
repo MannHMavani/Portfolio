@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mann Mavani | Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(135deg, #4e2cff, #d4ff4e);
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #4e2cff, #d4ff4e);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #4e2cff;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 8px;
+      width: 16px;
+      height: 16px;
+      background: #d4ff4e;
+      border-radius: 50%;
+    }
+    .navbar {
+  transition: all 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.nav-link {
+  position: relative;
+  margin: 0 10px;
+  font-weight: 500;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #4e2cff;
+  transition: width 0.3s ease;
+}
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #4e2cff !important;
+}
+.about-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+<!-- Header -->
+<header class="shadow-sm bg-white sticky-top">
+  <div class="container d-flex justify-content-between align-items-center py-3">
+    <nav class="d-none d-md-block">
+      <ul class="nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+        <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero-bg text-white py-5">
+  <div class="container d-flex flex-column-reverse flex-lg-row align-items-center justify-content-between gap-5">
+    <div>
+      <h2 class="display-4 fw-bold text-white">
+  Hi, I'm <span class="text-transparent bg-clip-text" style="background-image: linear-gradient(to right,#e9d5ff, #fbcfe8);">
+    Mann Mavani
+  </span>
+</h2>
+
+      <p class="lead">Creative full-stack developer and ML explorer.</p>
+    </div>
+    <img src="assets/profile.jpg" alt="Profile" class="rounded-full border-4 border-white shadow-lg w-40 h-40 object-cover">
+  </div>
+</section>
+
+
+<!-- About -->
+<section id="about" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="text-3xl fw-bold mb-3">About Me</h2>
+      <p class="text-muted lead max-w-3xl mx-auto">
+        Get to know more about my skills, experience and what I bring to the table
+      </p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="card about-card shadow-sm h-100 border-0">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="fw-bold mb-4">Who am I?</h3>
+            <p class="mb-4">
+              I'm Mann Mavani, a passionate Computer Science student specializing in full-stack development and machine learning. 
+              With a strong foundation in data structures and algorithms, I build scalable and efficient applications 
+              that solve real-world problems.
+            </p>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-calendar-alt text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Age</h6>
+                    <p class="mb-0">20</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-map-marker-alt text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Location</h6>
+                    <p class="mb-0">Junagadh, Gujarat, India</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-envelope text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Email</h6>
+                    <a href="mailto:mannmavani478@gmail.com" class="text-decoration-none">mannmavani478@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-center mb-3">
+                  <i class="fas fa-phone-alt text-primary me-3 fa-lg"></i>
+                  <div>
+                    <h6 class="fw-bold mb-0">Phone</h6>
+                    <a href="tel:+918511285988" class="text-decoration-none">+91 8511285988</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="card about-card shadow-sm h-100 border-0">
+          <div class="card-body p-4 p-md-5">
+            <h3 class="fw-bold mb-4">My Expertise</h3>
+            <p class="mb-4">
+              Results-driven Computer Science student with strong DSA and full-stack skills. Experienced in Python, Java, SQL, 
+              React, FastAPI, and cloud-based ML tools. Passionate about building innovative solutions and continuously 
+              expanding my knowledge in emerging technologies.
+            </p>
+            
+            <div class="mb-4">
+              <h5 class="fw-bold mb-3">What I Do</h5>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <i class="fas fa-laptop-code text-primary mb-2 fa-lg"></i>
+                    <h6 class="fw-bold">Full-Stack Development</h6>
+                    <p class="small mb-0">Building responsive web applications using modern frameworks</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <i class="fas fa-brain text-primary mb-2 fa-lg"></i>
+                    <h6 class="fw-bold">Machine Learning</h6>
+                    <p class="small mb-0">Developing and deploying ML models for real-world applications</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <i class="fas fa-database text-primary mb-2 fa-lg"></i>
+                    <h6 class="fw-bold">Database Design</h6>
+                    <p class="small mb-0">Creating efficient database structures for optimal performance</p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="p-3 bg-light rounded">
+                    <i class="fas fa-cloud text-primary mb-2 fa-lg"></i>
+                    <h6 class="fw-bold">Cloud Computing</h6>
+                    <p class="small mb-0">Leveraging cloud platforms for scalable solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<!-- Skills -->
+<section id="skills" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-3xl fw-bold mb-4 text-center">Skills</h2>
+    
+    <div class="row g-4">
+      <!-- Technical Skills -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold text-center mb-3">Technical Skills</h4>
+            <div class="row">
+              <!-- Programming Languages -->
+              <div class="col-6 mb-3">
+                <h5 class="fw-bold border-bottom pb-1">Languages</h5>
+                <ul class="list-unstyled">
+                  <li><span class="badge bg-primary mb-1">Java</span></li>
+                  <li><span class="badge bg-primary mb-1">Python</span></li>
+                  <li><span class="badge bg-primary mb-1">SQL</span></li>
+                  <li><span class="badge bg-primary mb-1">JavaScript</span></li>
+                  <li><span class="badge bg-primary mb-1">Dart</span></li>
+                  <li><span class="badge bg-primary mb-1">Shell Script</span></li>
+                  <li><span class="badge bg-primary mb-1">HTML/CSS</span></li>
+                </ul>
+              </div>
+              
+              <!-- Frameworks & Tools -->
+              <div class="col-6 mb-3">
+                <h5 class="fw-bold border-bottom pb-1">Frameworks</h5>
+                <ul class="list-unstyled">
+                  <li><span class="badge bg-success mb-1">ReactJS</span></li>
+                  <li><span class="badge bg-success mb-1">NodeJS</span></li>
+                  <li><span class="badge bg-success mb-1">Flutter</span></li>
+                  <li><span class="badge bg-success mb-1">FastAPI</span></li>
+                  <li><span class="badge bg-success mb-1">Flask</span></li>
+                </ul>
+                
+                <h5 class="fw-bold border-bottom pb-1 mt-3">Databases</h5>
+                <ul class="list-unstyled">
+                  <li><span class="badge bg-info mb-1">MS SQL</span></li>
+                  <li><span class="badge bg-info mb-1">MongoDB</span></li>
+                </ul>
+              </div>
+              
+              <!-- Software & Other Skills -->
+              <div class="col-12">
+                <h5 class="fw-bold border-bottom pb-1">Software & Tools</h5>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-secondary">MS Office</span>
+                  <span class="badge bg-secondary">Jupyter Notebook</span>
+                  <span class="badge bg-secondary">Android Studio</span>
+                  <span class="badge bg-secondary">Arduino IDE</span>
+                </div>
+                
+                <h5 class="fw-bold border-bottom pb-1 mt-3">Other Tech Skills</h5>
+                <div class="d-flex flex-wrap gap-1">
+                  <span class="badge bg-warning text-dark">Machine Learning</span>
+                  <span class="badge bg-warning text-dark">Internet of Things</span>
+                  <span class="badge bg-warning text-dark">Data Structures</span>
+                  <span class="badge bg-warning text-dark">Algorithms</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Soft Skills & Languages -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <!-- Soft Skills -->
+            <div class="mb-4">
+              <h4 class="fw-bold text-center mb-3">Soft Skills</h4>
+              <div class="d-flex flex-column gap-2">
+                <div>
+                  <h6 class="fw-bold mb-1">Time Management</h6>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-primary" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Problem-solving</h6>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-success" style="width: 85%"></div>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Adaptability</h6>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-info" style="width: 88%"></div>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Teamwork & Collaboration</h6>
+                  <div class="progress" style="height: 8px;">
+                    <div class="progress-bar bg-warning" style="width: 92%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Languages -->
+            <div>
+              <h4 class="fw-bold text-center mb-3">Languages</h4>
+              <div class="row text-center">
+                <div class="col-4">
+                  <div class="p-2 border rounded">
+                    <div class="fw-bold">English</div>
+                    <small class="text-muted">Professional</small>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="p-2 border rounded">
+                    <div class="fw-bold">Hindi</div>
+                    <small class="text-muted">Fluent</small>
+                  </div>
+                </div>
+                <div class="col-4">
+                  <div class="p-2 border rounded">
+                    <div class="fw-bold">Gujarati</div>
+                    <small class="text-muted">Native</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- HackerRank Ratings -->
+            <div class="mt-4">
+              <h4 class="fw-bold text-center mb-3">HackerRank</h4>
+              <div class="row text-center">
+                <div class="col-6">
+                  <div class="p-2">
+                    <div class="display-6 text-warning">5★</div>
+                    <div>SQL</div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-2">
+                    <div class="display-6 text-warning">5★</div>
+                    <div>Python</div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<!-- Projects -->
+<section id="projects" class="py-5 bg-gray-100">
+  <div class="container">
+    <h2 class="text-3xl fw-bold mb-4 text-center">Projects</h2>
+    <div class="row g-4">
+      <!-- ML Model Comparator -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">ML Model Comparator & CSV Predictor</h5>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">FastAPI</span>
+              <span class="badge bg-secondary me-1">Scikit-Learn</span>
+              <span class="badge bg-success me-1">Pandas</span>
+            </div>
+            <p class="card-text flex-grow-1">
+              - Web app for comparing ML models on uploaded CSV files<br>
+              - Automated model selection based on accuracy<br>
+              - Hyperparameter tuning and performance visualization<br>
+              - Generates predictions using the best trained model
+            </p>
+            <div class="mt-auto">
+              <a href="https://github.com/MannHMavani/ML-Project-CSV-Comparative-Study-And-Predictor" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Tic-Tac-Toe -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Tic-Tac-Toe Web Application</h5>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">React</span>
+              <span class="badge bg-secondary me-1">Node.js</span>
+              <span class="badge bg-success me-1">MongoDB</span>
+            </div>
+            <p class="card-text flex-grow-1">
+              - Full-stack 2-player game using MERN stack<br>
+              - Real-time updates and win/draw detection<br>
+              - Stores match results in MongoDB<br>
+              - Clean, responsive UI with player name input
+            </p>
+            <div class="mt-auto">
+              <a href="https://github.com/MannHMavani/tic-tac-toe" target="_blank" class="btn btn-primary btn-sm">View Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Weather Prediction -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title fw-bold">Weather Prediction Web-Page</h5>
+            <div class="mb-3">
+              <span class="badge bg-primary me-1">FastAPI</span>
+              <span class="badge bg-secondary me-1">Scikit-Learn</span>
+              <span class="badge bg-success me-1">Random Forest</span>
+            </div>
+            <p class="card-text flex-grow-1">
+              - Classifies weather into Rainy, Sunny, Cloudy & Snowy<br>
+              - Uses Random Forest ML algorithm<br>
+              - Deployed web interface for predictions<br>
+              - Enhanced understanding of weather classification
+            </p>
+            <div class="mt-auto">
+              <a href="https://github.com/MannHMavani/Weather_Preds" target="_blank" class="btn btn-primary btn-sm me-2">View Code</a>
+              <a href="https://weatherpredict.onrender.com/" target="_blank" class="btn btn-success btn-sm">Live Demo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Education -->
+<section id="education" class="py-5">
+  <div class="container p-4">
+    <h2 class="text-3xl fw-bold mb-5 text-center">Education</h2>
+    <div class="position-relative border-start border-2 border-primary ps-4 p-4">
+      <div class="mb-4 position-relative">
+        <h5 class="fw-bold">Darshan University</h5>
+        <p class="mb-0">B.Tech CSE, CPI 8.11 (2022–Present)</p>
+      </div>
+      <div class="mb-4 position-relative">
+        <h5 class="fw-bold">Shri NP Bhalodiya HS</h5>
+        <p class="mb-0">63.85% – 2022</p>
+      </div>
+      <div class="position-relative">
+        <h5 class="fw-bold">Carmel Convent School</h5>
+        <p class="mb-0">84.17% – 2020</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Certificates -->
+<!-- Certificates -->
+<section id="certificates" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-3xl fw-bold mb-4 text-center">Certificates & Achievements</h2>
+    
+    <div class="row g-4">
+      <!-- Google Cloud Certificates -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold text-center mb-3 border-bottom pb-2">
+              <i class="fas fa-cloud text-info me-2"></i>Google Cloud Certificates
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Create ML Models with BigQuery ML</span>
+                <span class="badge bg-info text-dark">May 2025</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Build Real World AI Applications With Gemini and Imagen</span>
+                <span class="badge bg-info text-dark">Apr 2025</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Prompt Design in Vertex AI</span>
+                <span class="badge bg-info text-dark">Apr 2025</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Perform Predictive Data Analysis in BigQuery</span>
+                <span class="badge bg-info text-dark">Apr 2025</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span class="badge bg-warning text-dark">
+                  <i class="fas fa-trophy me-1"></i> Diamond League – Google Cloud Skills Boost
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Other Certificates & Achievements -->
+      <div class="col-md-6">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h4 class="card-title fw-bold text-center mb-3 border-bottom pb-2">
+              <i class="fas fa-award text-warning me-2"></i>Other Certifications
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>Python For Machine Learning & Data Science (Udemy)</span>
+                <span class="badge bg-secondary">May 2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>SQL (Basic) - HackerRank</span>
+                <span class="badge bg-secondary">Jun 2024</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center">
+                <span>SQL (Intermediate) - HackerRank</span>
+                <span class="badge bg-secondary">Jun 2024</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Achievements -->
+      <div class="col-12">
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+            <h4 class="card-title fw-bold mb-3 border-bottom pb-2">
+              <i class="fas fa-trophy text-danger me-2"></i>Achievements
+            </h4>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="p-3 bg-light rounded mb-3">
+                  <h5 class="fw-bold">🏆 Ex-Quiz-It Runner-up</h5>
+                  <p class="mb-0">Prolic-2024 | Sep 2024</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="p-3 bg-light rounded">
+                  <h5 class="fw-bold">🥇 AINACS GK Olympiad Gold Medalist</h5>
+                  <p class="mb-0">AINACS | Aug 2016</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-3xl fw-bold mb-5 text-center">Contact Me</h2>
+    
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm border-0">
+          <div class="card-body p-4 p-md-5">
+            <div class="row g-4">
+              <!-- Contact Info -->
+              <div class="col-md-6">
+                <div class="d-flex flex-column h-100">
+                  <h4 class="fw-bold mb-3 border-bottom pb-2">Contact Information</h4>
+                  
+                  <div class="mb-4 d-flex align-items-start">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-envelope fa-lg"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Email</h6>
+                      <a href="mailto:mannmavani478@gmail.com" class="text-decoration-none">mannmavani478@gmail.com</a>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-4 d-flex align-items-start">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-phone-alt fa-lg"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Phone</h6>
+                      <a href="tel:+918511285988" class="text-decoration-none">+91 8511285988</a>
+                    </div>
+                  </div>
+                  
+                  <div class="mb-4 d-flex align-items-start">
+                    <div class="me-3 text-primary">
+                      <i class="fas fa-map-marker-alt fa-lg"></i>
+                    </div>
+                    <div>
+                      <h6 class="fw-bold mb-1">Location</h6>
+                      <p class="mb-0">Junagadh, Gujarat - 362001, India</p>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-auto">
+                    <h5 class="fw-bold mb-2">Connect with me</h5>
+                    <div class="d-flex gap-3">
+                      <a href="https://github.com/MannHMavani" target="_blank" class="text-dark">
+                        <i class="fab fa-github fa-2x"></i>
+                      </a>
+                      <a href="https://www.linkedin.com/in/mann-mavani-baa83926a/" target="_blank" class="text-primary">
+                        <i class="fab fa-linkedin fa-2x"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Quick Links -->
+              <div class="col-md-6">
+                <h4 class="fw-bold mb-3 border-bottom pb-2">Quick Links</h4>
+                <div class="d-grid gap-2">
+                  <a href="https://github.com/MannHMavani" target="_blank" class="btn btn-outline-dark d-flex align-items-center justify-content-between">
+                    <span>GitHub Profile</span>
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>
+                  <a href="https://github.com/MannHMavani/Resume/blob/main/Mann_Mavani_Resume_Update.pdf" target="_blank" class="btn btn-outline-primary d-flex align-items-center justify-content-between">
+                    <span>View Resume</span>
+                    <i class="fas fa-file-pdf"></i>
+                  </a>
+                </div>
+                
+                <div class="mt-4">
+                  <h5 class="fw-bold mb-2">Availability</h5>
+                  <div class="alert alert-success" role="alert">
+                    <i class="fas fa-check-circle me-2"></i> Open to opportunities and collaborations
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <div class="d-flex flex-column flex-md-row align-items-center gap-3">
+          <img src="assets/profile.jpg" alt="Mann Mavani" class="rounded-circle border border-white" width="50">
+          <div>
+            <h5 class="fw-bold mb-0">Mann Mavani</h5>
+            <small class="text-white-50">Full Stack Developer & ML Enthusiast</small>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6 text-center text-md-end">
+        <div class="d-flex justify-content-center justify-content-md-end gap-3 mb-3">
+          <a href="mailto:mannmavani478@gmail.com" class="text-white">
+            <i class="fas fa-envelope fa-lg"></i>
+          </a>
+          <a href="https://github.com/MannHMavani" target="_blank" class="text-white">
+            <i class="fab fa-github fa-lg"></i>
+          </a>
+          <a href="tel:+918511285988" class="text-white">
+            <i class="fas fa-phone-alt fa-lg"></i>
+          </a>
+        </div>
+        
+        <p class="mb-0">
+          © 2025 Mann Mavani. All rights reserved. 
+          <span class="d-block d-md-inline mt-2 mt-md-0">
+            Built with <i class="fas fa-heart text-danger"></i> using Bootstrap & Tailwind
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  document.querySelector('.hamburger')?.addEventListener('click', () => {
+    document.querySelector('.nav')?.classList.toggle('d-none');
+  });
+  // Add scroll effect to navbar
+window.addEventListener('scroll', function() {
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+</script>
+
+</body>
+</html>
